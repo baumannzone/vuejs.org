@@ -6,7 +6,7 @@ order: 302
 
 ## Introducción
 
-Además del conjunto predeterminado de directivas incluidas en el núcleo (`v-model` y `v-show`), Vue también le permite registrar sus propias directivas personalizadas. Note que en Vue 2.0, la forma primaria de reutilización y abstracción del código son los componentes; sin embargo, puede haber casos en los que necesite un acceso al bajo nivel al DOM en elementos simples, y aquí es donde las directivas personalizadas seguirían siendo útiles. Un ejemplo sería enfocarse en un elemento _input_, como este:
+Además del conjunto predeterminado de directivas incluidas en el núcleo (`v-model` y `v-show`), Vue también le permite registrar sus propias directivas personalizadas. Note que en Vue 2.0, la forma primaria de reutilización y abstracción del código son los componentes; sin embargo, puede haber casos en los que necesite un acceso al bajo nivel al DOM en elementos simples, y aquí es donde las directivas personalizadas seguirían siendo útiles. Un ejemplo sería poner el foco ([focus](https://developer.mozilla.org/es/docs/Web/API/HTMLElement/focus)) en un elemento _input_, como este:
 
 {% raw %}
 <div id="simplest-directive-example" class="demo">
@@ -24,7 +24,7 @@ new Vue({
 </script>
 {% endraw %}
 
-Cuando se carga la página, este elemento se enfoca (nota: el atributo nativo `autofocus` no funciona en Safari para dispositivos mobiles). De hecho, si no ha hecho clic en nada más desde que visitó esta página, el _input_ de arriba debería estar enfocada ahora. Ahora vamos a construir la directiva que realiza esto:
+Cuando se carga la página, este elemento se enfoca (nota: el atributo nativo `autofocus` no funciona en Safari para dispositivos mobiles). De hecho, si no ha hecho clic en nada más desde que visitó esta página, el _input_ de arriba debería tener el foco. Ahora vamos a construir la directiva que realiza esto:
 
 ``` js
 // Registra una directiva personalizada global llamada `v-focus`
